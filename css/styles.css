@@ -77,14 +77,13 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
-.email_and_phone {
+.header-contacts > a {
   display: flex;
   gap: 10px;
-  align-items: center;
 }
-.email_and_phone:hover,
-.email_and_phone:focus {
-  color: var(--link-color-hover);
+.header-contacts > a > span {
+  display: flex;
+  align-items: center;
 }
 .icon-envelope {
   height: 12px;
@@ -126,7 +125,7 @@ ul {
   justify-content: center;
   width: 100%;
   background: linear-gradient(rgba(25, 28, 38, 0.4), rgba(25, 28, 38, 0.8)),
-    url("images/hero_image.jpg");
+    url("/images/hero_image.jpg");
   background-repeat: no-repeat;
   background-color: #2f303a;
   background-position: center;
@@ -488,32 +487,30 @@ footer div .contact.mail {
   justify-content: center;
   width: 1200px;
 }
-.customers-section > .customers > div {
+.customers-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
 }
-.customers-section > .customers > div > button {
-  background-color: #fff;
-  color: #AFB1B8;
+
+.customer-icon {
+  width: 170px;
+  height: 92px;
+  background-color: transparent;
   border-radius: 4px;
+  border: 1px solid #afb1b8;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #afb1b8;
-  box-shadow: none;
-  width: 170px;
-  height: 92px;
-  padding: 16px 32px;
-}
-.customers-section > .customers > div > button:hover,
-.customers-section > .customers > div > button:focus {
-  color: #2196f3;
-  border-radius: 4px;
-  border: 1px solid #2196f3;
-  box-shadow: none;
-}
-.customer-icon svg {
   color: var(--customer-icon-color);
+}
+
+.customer-icon svg {
+  height: 60px;
+  width: 106px;
+}
+
+.customers .customer-icon:hover {
+  border-radius: 4px;
+  border: 1px solid var(--link-color-hover);
+  color: var(--link-color-hover);
 }
