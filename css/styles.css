@@ -1,5 +1,9 @@
 :root {
   --link-color-hover: #2196f3;
+  --social-icons-color: #afb1b8;
+  --social-icons-background-color: #fff;
+  --button-color-hover: #fff;
+  --customer-icon-color: #afb1b8;
 }
 
 body {
@@ -62,15 +66,33 @@ h2 {
 .nav-header {
   display: flex;
   align-items: center;
-  flex-grow: 5;
+  flex-grow: 9;
   padding: 0 100px;
 }
 .header-contacts {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
   flex-grow: 1;
   justify-content: space-between;
   align-items: center;
+}
+.email_and_phone {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.email_and_phone:hover,
+.email_and_phone:focus {
+  color: var(--link-color-hover);
+}
+.icon-envelope {
+  height: 12px;
+  width: 16px;
+}
+.icon-smartphone {
+  height: 16px;
+  width: 10px;
 }
 .menu {
   display: flex;
@@ -103,7 +125,11 @@ ul {
   display: flex;
   justify-content: center;
   width: 100%;
+  background: linear-gradient(rgba(25, 28, 38, 0.4), rgba(25, 28, 38, 0.8)),
+    url("/images/hero_image.jpg");
+  background-repeat: no-repeat;
   background-color: #2f303a;
+  background-position: center;
 }
 .hero-container {
   display: flex;
@@ -141,7 +167,8 @@ ul {
 .team-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 25px;
   width: 100%;
   padding: 0 0 94px 0;
 }
@@ -151,11 +178,10 @@ ul {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   background-color: #fff;
-  margin: 10px;
 }
 .team-description {
   text-align: center;
-  padding: 30px 0;
+  margin-top: 30px;
 }
 .team-description h5 {
   color: #212121;
@@ -235,26 +261,31 @@ ul {
   margin-bottom: 200px;
 }
 
-button:hover {
+button:hover,
+button:focus {
   background-color: var(--link-color-hover);
-  color: #fff;
+  color: var(--button-color-hover);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
 }
 
-.button-cta:hover {
+.button-cta:hover,
+.button-cta:focus {
   background: transparent;
   box-shadow: 0px 0px 0px 3px #2196f3 inset;
   color: #2196f3;
 }
 .list-about-container {
   display: flex;
-  width: 1200px;
+  width: 100%;
   flex-wrap: wrap;
   justify-content: center;
   padding-left: 10px;
 }
 .list-about {
   display: flex;
+  width: 1200px;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
   margin: 0;
 }
@@ -329,6 +360,10 @@ button:hover {
   box-shadow: 0px 0px 0px 1px #eee inset;
   margin-bottom: 30px;
 }
+.project-box:hover {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
 .footer-container {
   display: flex;
   justify-content: center;
@@ -343,6 +378,20 @@ button:hover {
   display: flex;
   flex-direction: column;
   padding: 60px 0 60px 10px;
+}
+.footer-social-links {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0 60px 94px;
+}
+.footer-social-links h4 {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
 }
 address {
   color: #fff;
@@ -361,4 +410,110 @@ footer div .contact.mail {
   display: flex;
   align-content: center;
   background-color: #000;
+}
+
+.icons-list {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 30px;
+  gap: 10px;
+  justify-content: center;
+}
+
+.icons-list .icon {
+  color: var(--social-icons-color);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  background-color: var(--social-icons-background-color);
+  border-radius: 22px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons-list .icon:hover,
+.icons-list .icon:focus {
+  color: var(--button-color-hover);
+  background-color: var(--link-color-hover);
+}
+
+.icons-list .icon svg {
+  width: 20px;
+  height: 20px;
+}
+.footer-icons-list {
+  display: flex;
+  gap: 10px;
+}
+.footer-icons-list .icon {
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-icons-list .icon:hover,
+.footer-icons-list .icon:focus {
+  color: var(--button-color-hover);
+  background-color: var(--link-color-hover);
+}
+
+.footer-icons-list .icon svg {
+  width: 20px;
+  height: 20px;
+}
+.features-icon {
+  border-radius: 4px;
+  background: #f5f4fa;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+
+.features-icon svg {
+  height: 70px;
+  width: 70px;
+}
+.customers-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.customers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1200px;
+}
+.customers-section > .customers > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.customers-section > .customers > div > button {
+  background-color: #fff;
+  color: #AFB1B8;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  box-shadow: none;
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+}
+.customers-section > .customers > div > button:hover,
+.customers-section > .customers > div > button:focus {
+  color: #2196f3;
+  border-radius: 4px;
+  border: 1px solid #2196f3;
+  box-shadow: none;
+}
+.customer-icon svg {
+  color: var(--customer-icon-color);
 }
