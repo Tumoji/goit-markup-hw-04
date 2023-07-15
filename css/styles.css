@@ -129,6 +129,7 @@ ul {
   background-repeat: no-repeat;
   background-color: #2f303a;
   background-position: center;
+  background-size: cover;
 }
 .hero-container {
   display: flex;
